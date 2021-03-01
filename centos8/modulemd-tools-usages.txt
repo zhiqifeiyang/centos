@@ -1,3 +1,14 @@
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+      Error: No available modular metadata for modular package
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+
+
+
+
 [确保module rpm repo服务器时centos8系列环境]
 
 安装modular metadata生成工具:
