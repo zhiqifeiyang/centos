@@ -1,0 +1,20 @@
+[确保module rpm repo服务器时centos8系列环境]
+
+安装modular metadata生成工具:
+   dnf install python3-devel python3 gcc
+   dnf install python3-createrepo_c
+   dnf install python3-libdnf 
+   dnf install python3-libmodulemd
+   # dnf install libmodulemd
+   # dnf install modulemd-tools
+
+随便找一个目录，执行git clone操作：
+   git clone https://github.com/rpm-software-management/modulemd-tools.git
+   cd modulemd-tools/repo2module/
+   python3 setup.py install --user
+
+创建repodata 和 modular metadata:
+   cd /root/pkgs/rpmlist
+   createrepo_c .
+   /root/.local/bin/repo2module  -s stable -d . modules.yaml
+   modifyrepo_c --mdtype=modules modules.yaml repodata/
